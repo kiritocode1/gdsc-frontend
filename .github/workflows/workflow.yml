@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v1
       
       - name: Building 
-        run: npm install --legacy-peer-deps
+        run: npm install --legacy-peer-deps && npm run build 
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
