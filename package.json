@@ -1,7 +1,7 @@
 {
   "name": "gdsc",
   "version": "0.1.0",
-  "homepage": "http://GDSC-NBNSSOE.github.io/",
+  "homepage": "http://GDSC-NBNSSOE.github.io/gdsc-frontend",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
