@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content:center;
     align-items: center;
+    margin-bottom: 20vh;
 
 }
 .overview{
@@ -39,7 +40,10 @@
     justify-content:center;
     align-items: center;
     margin-right: 50px;
-    /* background-color: red; */
+}
+
+.leftCont div p{
+    text-align: left;
 }
 
 .leftCont div p:nth-child(1){
@@ -76,6 +80,27 @@
 
 .rightCont img{
     width: 75%;
+    height: max-content;
+    /* height: 50%; */
+    /* background-color: red; */
+}
+
+.cards_root{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards{
+    width: 1050px;
+    height: max-content;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 @media screen and (max-width:966px) {
@@ -90,6 +115,10 @@
         width: 100%;
         height: max-content;
         margin-bottom: 100px;
+        padding: 0px 20px 0px 20px;
+    }
+    .leftCont div{
+        margin: 0;
     }
     .leftCont div p{
         text-align: center;
@@ -97,4 +126,8 @@
     .leftCont div button{
         align-self: center;
     }
+    .cards_root{
+        margin-top: 100px;
+    }
 }
+

@@ -1,6 +1,34 @@
 import React from "react";
 import styles from "./index.module.css";
 import GDSCHOME from "../../assets/gdsc-home.png";
+import Card from "../../components/card";
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
+import GroupsIcon from '@mui/icons-material/Groups';
+
+const cards_data = [
+    {
+        id:1,
+        width:"300px",
+        height:"350px",
+        icon:<RocketLaunchIcon style={{width: "75%",height: "75%",color: "#4a91f6"}}/>,
+        heading:"Concept of DSC",
+        description:"The DSC program is a grassroots channel through which Google provides development, mobile & web development skills for students, towards employability."
+    },
+    {
+        id:2,
+        icon:<EmojiObjectsIcon style={{width: "75%",height: "75%",color: "#189e59"}}/>,
+        heading:"Why DSC?",
+        description:"For students to learn development skills, solve problems through technology and inspire them to be world class developers and changemakers."
+    },
+    {
+        id:3,
+        icon:<GroupsIcon style={{width: "75%",height: "75%",color: "#e1382b"}}/>,
+        heading:"Target audience",
+        description:"DSC activities are targeted at University students and any others including faculty members who want to learn development skills & work to solve real-life problems."
+    }
+]
+
 
 export default function Home(){
 
@@ -8,6 +36,7 @@ export default function Home(){
 
     return (
             <div className={styles.root}>
+
                 <div className={styles.overview}>
                     <div className={styles.leftCont}>
                         <div>
@@ -33,6 +62,17 @@ export default function Home(){
                     </div>
                     <div className={styles.rightCont}>
                         <img src={GDSCHOME} alt="diversity" />
+                    </div>
+                </div>
+
+
+                <div className={styles.cards_root}>
+                    <div className={styles.cards}>
+                        {
+                            cards_data.map((props)=>{
+                                return <Card card_data={{...props,width:"280px",height:"315px"}} key={props.id}/>
+                            })
+                        }
                     </div>
                 </div>
 
