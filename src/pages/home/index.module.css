@@ -39,6 +39,7 @@
     justify-content:center;
     align-items: center;
     margin-right: 50px;
+    /* background-color: red; */
 }
 
 .leftCont div p:nth-child(1){
@@ -80,7 +81,7 @@
 @media screen and (max-width:966px) {
     .root{
         margin-top: 10vh;
-        margin-bottom: 30vh;
+        margin-bottom: 10vh;
     }
     .overview{
       flex-wrap: wrap;
@@ -89,12 +90,6 @@
         width: 100%;
         height: max-content;
         margin-bottom: 100px;
-        padding: 20px;
-
-    }
-    .leftCont div {
-        text-align: center;
-        margin: 0;
     }
     .leftCont div p{
         text-align: center;
