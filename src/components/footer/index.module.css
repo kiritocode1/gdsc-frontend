@@ -1,0 +1,152 @@
+.root{
+    width: 100vw;
+    height: min-content;
+    background-color: #3b424d;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+
+}
+
+.root p{
+    color:white;
+}
+
+.left,.right,.middle{
+    min-width: 350px;
+    margin-right:10px;
+    margin-bottom: 10px;
+}
+
+.left{
+    width: 30%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.heading{
+    font-size: 2em;
+    /* background-color: green; */
+    font-weight: 600;
+    color: white;
+}
+.desc{
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: left;
+    letter-spacing: 0.5px;
+    /* background-color: green; */
+}
+
+.left button{
+    width: 125px;
+    height: 45px;
+    border-radius: 20px;
+    background-color: #6f6bf9;
+    color: white;
+    border: none;
+    font-size: 1em;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.left button:hover{
+    background-color: #32456b;
+}
+
+.dicord_logo{
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+}
+
+.middle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.middle p{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.middle a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+
+.right{
+    min-width: 150px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.right p:nth-child(1){
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.right p{
+    font-size: 1.1em;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right p svg{
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+}
+
+.right div{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.right div svg{
+    width: 20px;
+    height: 20px;
+    background-color: #495464;
+    color: white;
+    padding: 10px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.right div svg:hover{
+    color: #495464;
+    background-color: white;
+}
+
+@media screen and (max-width:966px){
+    .root{
+        margin-bottom: 80px;
+    }
+}
+
+@media screen and (max-width:719px) {
+    .middle{
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+}

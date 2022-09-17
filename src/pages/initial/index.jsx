@@ -1,4 +1,4 @@
-import {React,useEffect} from "react";
+import React,{useEffect} from "react";
 import styles from "./index.module.css";
 import AOS from "aos";
 import logo from "../../assets/logo.png";

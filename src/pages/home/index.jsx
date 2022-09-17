@@ -2,28 +2,29 @@ import React from "react";
 import styles from "./index.module.css";
 import GDSCHOME from "../../assets/gdsc-home.png";
 import Card from "../../components/card";
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
-import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
-import GroupsIcon from '@mui/icons-material/Groups';
+import {IoRocketOutline} from "react-icons/io5";
+import {MdOutlineGroups} from "react-icons/md";
+import {FaRegLightbulb} from 'react-icons/fa';
+
 
 const cards_data = [
     {
         id:1,
         width:"300px",
         height:"350px",
-        icon:<RocketLaunchIcon style={{width: "75%",height: "75%",color: "#4a91f6"}}/>,
+        icon:<IoRocketOutline style={{width: "75%",height: "75%",color: "#4a91f6"}}/>,
         heading:"Concept of DSC",
         description:"The DSC program is a grassroots channel through which Google provides development, mobile & web development skills for students, towards employability."
     },
     {
         id:2,
-        icon:<EmojiObjectsIcon style={{width: "75%",height: "75%",color: "#189e59"}}/>,
+        icon:<FaRegLightbulb style={{width: "75%",height: "75%",color: "#189e59"}}/>,
         heading:"Why DSC?",
         description:"For students to learn development skills, solve problems through technology and inspire them to be world class developers and changemakers."
     },
     {
         id:3,
-        icon:<GroupsIcon style={{width: "75%",height: "75%",color: "#e1382b"}}/>,
+        icon:<MdOutlineGroups style={{width: "75%",height: "75%",color: "#e1382b"}}/>,
         heading:"Target audience",
         description:"DSC activities are targeted at University students and any others including faculty members who want to learn development skills & work to solve real-life problems."
     }
@@ -32,7 +33,12 @@ const cards_data = [
 
 export default function Home(){
 
-
+    const memberAction = ()=>{
+        window.open(
+            "https://gdsc.community.dev/accounts/login/?next=/nbn-sinhgad-school-of-engineering-pune/",
+            "_blank"
+        );
+    }
 
     return (
             <div className={styles.root}>
@@ -57,7 +63,7 @@ export default function Home(){
                                 <span style={{color:"#189e59"}}> leadership skills</span>
                                 .
                             </p>
-                            <button>Become a member</button>
+                            <button onClick={memberAction}>Become a member</button>
                         </div>
                     </div>
                     <div className={styles.rightCont}>

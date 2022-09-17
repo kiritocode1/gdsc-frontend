@@ -1,4 +1,4 @@
-import { React,useState,useEffect} from "react";
+import React,{useState,useEffect} from "react";
 import { Link } from "react-router-dom";
 import styles from "./index.module.css";
 import NBNSSOE from "../../assets/NBNSSOE.svg";
