@@ -13,6 +13,7 @@ export const endpoints = {
   home:`home/`,
   events:`events/`,
   projects:`projects/`,
+  acts:"acts/",
   team:`team/`,
   contact:`contact/`,
 }

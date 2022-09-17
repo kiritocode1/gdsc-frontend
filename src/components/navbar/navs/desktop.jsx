@@ -19,7 +19,7 @@ export default function DesktopNav(){
                 <li><NavLink className="navlnk" style={isActive => activeNav(isActive)} to={`/${endpoints.home}`}>Home</NavLink></li>
                 <li><NavLink className="navlnk" style={isActive => activeNav(isActive)} to={`/${endpoints.events}`}>Events</NavLink></li>
                 <li><NavLink className="navlnk" style={isActive => activeNav(isActive)} to={`/${endpoints.projects}`}>All Projects</NavLink></li>
-                <li><NavLink className="navlnk" style={isActive => activeNav(isActive)} to={`/${endpoints.home}`}>Acts</NavLink></li>
+                <li><NavLink className="navlnk" style={isActive => activeNav(isActive)} to={`/${endpoints.acts}`}>Acts</NavLink></li>
                 <li><NavLink className="navlnk" style={isActive => activeNav(isActive)} to={`/${endpoints.team}`}>Our Team</NavLink></li>
                 <li><NavLink className="navlnk" style={isActive => activeNav(isActive)} to={`/${endpoints.contact}`}>Contact Us</NavLink></li>
               </ul>
