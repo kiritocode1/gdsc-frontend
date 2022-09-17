@@ -141,6 +141,10 @@
 @media screen and (max-width:966px){
     .root{
         margin-bottom: 80px;
+        padding-left: 10px;
+    }
+    .left,.right,.middle{
+        width: 90%;
     }
 }
 
