@@ -153,4 +153,8 @@
         align-items: flex-start;
         margin-bottom: 15px;
     }
+    .right p{
+        font-size: 0.8em;
+        font-weight: 500;
+    }
 }

@@ -1,4 +1,9 @@
 
+body{
+  overflow-y: scroll;
+  overflow-x: hidden !important;
+}
+
 .navlnk{
   text-decoration: none;
   font-size: 1.1rem;
