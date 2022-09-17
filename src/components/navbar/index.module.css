@@ -54,12 +54,12 @@
 }
 
 .mobileUl{
-    margin-left: 100px;
+    margin-left: 90px;
     width: 70%;
     height: 100%;
     display: flex;
     justify-content: flex-end !important;
-    margin-right: 50px;
+    margin-right: 80px;
     align-items: center;
 }
 .mobileUl li{
