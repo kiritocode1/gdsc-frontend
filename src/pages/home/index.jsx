@@ -1,30 +1,30 @@
+//---
+
 import React from "react";
 import styles from "./index.module.css";
 import GDSCHOME from "../../assets/gdsc-home.png";
 import Card from "../../components/card";
-import {IoRocketOutline} from "react-icons/io5";
-import {MdOutlineGroups} from "react-icons/md";
-import {FaRegLightbulb} from 'react-icons/fa';
+import  basic from "../../assets/imagey/markus-spiske-Skf7HxARcoc-unsplash.jpg"; 
+import basic2 from "../../assets/imagey/heihei.jpg"; 
+import  basic3 from "../../assets/imagey/render.jpg"; 
 
-
+// ---
 const cards_data = [
     {
         id:1,
-        width:"300px",
-        height:"350px",
-        icon:<IoRocketOutline style={{width: "75%",height: "75%",color: "#4a91f6"}}/>,
+        icon:basic,
         heading:"Concept of DSC",
         description:"The DSC program is a grassroots channel through which Google provides development, mobile & web development skills for students, towards employability."
     },
     {
         id:2,
-        icon:<FaRegLightbulb style={{width: "75%",height: "75%",color: "#189e59"}}/>,
+        icon:basic2,
         heading:"Why DSC?",
         description:"For students to learn development skills, solve problems through technology and inspire them to be world class developers and changemakers."
     },
     {
         id:3,
-        icon:<MdOutlineGroups style={{width: "75%",height: "75%",color: "#e1382b"}}/>,
+        icon:basic3,
         heading:"Target audience",
         description:"DSC activities are targeted at University students and any others including faculty members who want to learn development skills & work to solve real-life problems."
     }
@@ -46,9 +46,9 @@ export default function Home(){
                 <div className={styles.overview}>
                     <div className={styles.leftCont}>
                         <div>
-                            <p>Google Developer Student Clubs NBNSSOE</p>
+                            <p   className="text-red-800 animate-pulse">Google Developer Student Clubs NBNSSOE</p>
                             <p>
-                                <span style={{color:"#4b91f4"}}>G</span>
+                                <span>G</span>
                                 <span style={{color:"#f74037"}}>o</span>
                                 <span style={{color:"#ffb806"}}>o</span>
                                 <span style={{color:"#4b91f4"}}>g</span>
@@ -72,15 +72,14 @@ export default function Home(){
                 </div>
 
 
-                <div className={styles.cards_root}>
-                    <div className={styles.cards}>
+                    <div className="md:flex mt-5 justify-evenly gap-2 w-full px-2 flex-wrap">
                         {
-                            cards_data.map((props)=>{
-                                return <Card card_data={{...props,width:"280px",height:"315px"}} key={props.id}/>
+                            cards_data.map((data)=>{
+                                return <Card {...data} />
                             })
                         }
                     </div>
-                </div>
+
 
             </div>
     )

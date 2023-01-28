@@ -63,6 +63,7 @@ export default function Footer(){
                 <p> <IoMdMail/>nbnssoe.gdsc@gmail.com</p>
                 <p> <HiLocationMarker/>NBNSSOE, Pune, Maharashtra 411041, India</p>
                 <div>
+
                     <BsGithub onClick={()=>{socialAction("github")}}/>
                     <BsYoutube onClick={()=>{socialAction("youtube")}}/>
                     <BsLinkedin onClick={()=>{socialAction("linkedin")}}/>
