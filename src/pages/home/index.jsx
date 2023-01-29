@@ -7,7 +7,8 @@ import Card from "../../components/card";
 import  basic from "../../assets/imagey/markus-spiske-Skf7HxARcoc-unsplash.jpg"; 
 import basic2 from "../../assets/imagey/heihei.jpg"; 
 import  basic3 from "../../assets/imagey/render.jpg"; 
-
+import { Container, Text , Image} from "@nextui-org/react";
+import bg_pattern from "../../assets/imagey/Aare.svg"; 
 // ---
 const cards_data = [
     {
@@ -33,17 +34,17 @@ const cards_data = [
 
 export default function Home(){
 
-    const memberAction = ()=>{
-        window.open(
-            "https://gdsc.community.dev/accounts/login/?next=/nbn-sinhgad-school-of-engineering-pune/",
-            "_blank"
-        );
-    }
+    // const memberAction = ()=>{
+    //     window.open(
+    //         "https://gdsc.community.dev/accounts/login/?next=/nbn-sinhgad-school-of-engineering-pune/",
+    //         "_blank"
+    //     );
+    // }
 
     return (
-            <div className={styles.root}>
+            <div className="hello world">
 
-                <div className={styles.overview}>
+                {/* <div className={styles.overview}>
                     <div className={styles.leftCont}>
                         <div>
                             <p   className="text-red-800 animate-pulse">Google Developer Student Clubs NBNSSOE</p>
@@ -69,9 +70,14 @@ export default function Home(){
                     <div className={styles.rightCont}>
                         <img src={GDSCHOME} alt="diversity" />
                     </div>
-                </div>
-
-
+                </div> */}
+            <Container>
+                <Text h1>
+                    Hello World , this is GDSC PUNE
+                </Text>
+                <Image src={bg_pattern} />
+            </Container>
+            
                     <div className="md:flex mt-5 justify-evenly gap-2 w-full px-2 flex-wrap">
                         {
                             cards_data.map((data)=>{

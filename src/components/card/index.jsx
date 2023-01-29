@@ -36,10 +36,10 @@ const Cardy = ({heading , description , icon}) => (
   <Card isHoverable isPressable>
     <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }} >
       <Col>
-        <Text size={30} weight="bold" transform="uppercase" color="$blue900">
+        <Text size={40} weight="bold" transform="uppercase" color="$blue500">
           {heading}
         </Text>
-        <Text h4 color="white">
+        <Text h4 color="secondary">
           {description}
         </Text>
       </Col>

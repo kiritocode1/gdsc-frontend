@@ -9,8 +9,8 @@ import Contact from "./pages/contact";
 import Binder from './pages/binder';
 
 export const endpoints = {
-  initial:`/`,
-  home:`home/`,
+
+  home:`/`,
   events:`events/`,
   projects:`projects/`,
   acts:"acts/",
@@ -21,7 +21,7 @@ export const endpoints = {
 function App() {
   return (
         <Routes>
-                <Route exact path={endpoints.initial} element={<Initial/>}/>
+                {/* <Route exact path={endpoints.initial} element={<Initial/>}/> */}
            
                 <Route path={endpoints.home} element={<Binder><Home/></Binder>}/>
 

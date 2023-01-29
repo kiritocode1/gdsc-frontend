@@ -1,15 +1,15 @@
 import React from "react";
-import styles from "./index.module.css";
-
+import { Text } from "@nextui-org/react";
 
 export default function Events(){
 
 
 
     return (
-
-            <div className={styles.root}>
-                <p>Initial</p>
-            </div>
+        <>
+            <Text size={30} css={{textGradient: "45deg, $blue600 40%, $pink600 50%",}}>
+            hello world 
+        </Text>
+        </>
     )
 }

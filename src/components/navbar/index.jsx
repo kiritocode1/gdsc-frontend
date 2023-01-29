@@ -46,15 +46,10 @@ import NBNSSOE from "../../assets/imagey/vector-logo.svg";
 
 // ----------------------------------------------------------------------------------------------------------
 
-// const Navbar = ()=><div className= "text-red-500">hello Navbar </div>
 
-// export default Navbar; 
-
-
-//----------------------------------------------------------------------------------
 
 import { Navbar, Button, Link, Image} from "@nextui-org/react";
-
+// import { Link as Route_Link } from "react-router-dom";
 
 const Navbary = () => {
     return (
@@ -64,10 +59,10 @@ const Navbary = () => {
                     height={40} className="hover:animate-pulse cursor-pointer" alt ="Logo"/>
             </Navbar.Brand>
             <Navbar.Content hideIn="xs">
-                <Navbar.Link href="#">Features</Navbar.Link>
-                <Navbar.Link  href="#">Customers</Navbar.Link>
-                <Navbar.Link href="#">Pricing</Navbar.Link>
-                <Navbar.Link href="#">Company</Navbar.Link>
+                <Navbar.Link href="gdsc-frontend/">Home</Navbar.Link>
+                <Navbar.Link  href="/events/">Team</Navbar.Link>
+                <Navbar.Link href="#">Events</Navbar.Link>
+                <Navbar.Link href="#">Contact us</Navbar.Link>
             </Navbar.Content>
             <Navbar.Content>
                 <Navbar.Link color="inherit" href="#">
