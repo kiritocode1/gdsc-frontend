@@ -42,7 +42,7 @@ export default function Home(){
     // }
 
     return (
-            <div className="hello world">
+            <div className="hero-font">
 
                 {/* <div className={styles.overview}>
                     <div className={styles.leftCont}>
