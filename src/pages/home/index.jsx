@@ -72,29 +72,11 @@ export default function Home(){
                     </div>
                 </div> */}
             <Container xl>
-                <Row gap={1}>
-                    <Col>
-                <Text h1>
-                    Hello World , this is GDSC PUNE
-                        </Text>
-                
-                <Text>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio omnis eos ex velit. Deleniti, alias nam, repudiandae quae voluptate quis sequi consequuntur inventore omnis voluptatibus adipisci tempora ab eius ratione.
-                </Text>
-                    </Col>
-                    
-                <Col span={6}>
                         <Image
-                            // css={{
-                            //     transform: "rotate(-45deg)", 
-                            // }}
-                            width={1000}
-                            height={1000}
-                            objectFit="cover"
+                            autoResize
                             src={bg_pattern}
+                            className="w-full"
                         />
-                </Col>
-                </Row>
             </Container>
             
                     <div className="md:flex mt-5 justify-evenly gap-2 w-full px-2 flex-wrap">

@@ -59,21 +59,15 @@ import { Navbar, Link, Text, Avatar, Dropdown , Image} from "@nextui-org/react";
 const Navbary = () => {
     const [Activity, setActivity] = useState(false);
     const collapseItems = [
-        "Profile",
-        "Dashboard",
-        "Activity",
-        "Analytics",
-        "System",
-        "Deployments",
-        "My Settings",
-        "Team Settings",
-        "Help & Feedback",
-        "Log Out",
+        "Community",
+        "Contact Us", 
+        "Projects", 
+        "Products"
     ];
 
     return (
         <div className="w-full">
-            <Navbar isBordered variant="sticky">
+            <Navbar isBordered variant="floating">
                 <Navbar.Toggle showIn="xs" />
                 <Navbar.Brand
                     css={{
@@ -82,7 +76,7 @@ const Navbary = () => {
                         },
                     }}
                 >
-                    <Image  src={NBNSSOE} alt="logo image " width={50}/>
+                    <Image  src={NBNSSOE} alt="logo image " width={90}/>
                 </Navbar.Brand>
                 <Navbar.Content
                     enableCursorHighlight
@@ -92,10 +86,10 @@ const Navbary = () => {
                 >
                     <Navbar.Link href="#" isActive={Activity} onClick={()=>setActivity(!Activity)}>Community</Navbar.Link>
                     <Navbar.Link isActive={Activity} href="#" onClick={()=>setActivity(!Activity)}>
-                        Customers
+                        Contact us 
                     </Navbar.Link>
-                    <Navbar.Link href="#">Pricing</Navbar.Link>
-                    <Navbar.Link href="#">Company</Navbar.Link>
+                    <Navbar.Link href="#">Projects</Navbar.Link>
+                    <Navbar.Link href="#">Products</Navbar.Link>
                 </Navbar.Content>
                 <Navbar.Content
                     css={{
@@ -105,65 +99,21 @@ const Navbary = () => {
                         },
                     }}
                 >
-                    <Dropdown placement="bottom-right">
-                        <Navbar.Item>
-                            <Dropdown.Trigger>
-                                <Avatar
-                                    bordered
-                                    as="button"
-                                    color="warning"
-                                    size="md"
-                                    src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-                                />
-                            </Dropdown.Trigger>
-                        </Navbar.Item>
-                        <Dropdown.Menu
-                            aria-label="User menu actions"
-                            color="warning"
-                            onAction={(actionKey) => console.log({ actionKey })}
-                        >
-                            <Dropdown.Item key="profile" css={{ height: "$18" }}>
-                                <Text b color="inherit" css={{ d: "flex" }}>
-                                    Signed in as
-                                </Text>
-                                <Text b color="inherit" css={{ d: "flex" }}>
-                                    zoey@example.com
-                                </Text>
-                            </Dropdown.Item>
-                            <Dropdown.Item key="settings" withDivider>
-                                My Settings
-                            </Dropdown.Item>
-                            <Dropdown.Item key="team_settings">Team Settings</Dropdown.Item>
-                            <Dropdown.Item key="analytics" withDivider>
-                                Analytics
-                            </Dropdown.Item>
-                            <Dropdown.Item key="system">System</Dropdown.Item>
-                            <Dropdown.Item key="configurations">Configurations</Dropdown.Item>
-                            <Dropdown.Item key="help_and_feedback" withDivider>
-                                Help & Feedback
-                            </Dropdown.Item>
-                            <Dropdown.Item key="logout" withDivider color="error">
-                                Log Out
-                            </Dropdown.Item>
-                        </Dropdown.Menu>
-                    </Dropdown>
+                    
+                    
                 </Navbar.Content>
                 <Navbar.Collapse disableAnimation>
-                    {collapseItems.map((item, index) => (
+                    {collapseItems.map((item) => (
                         <Navbar.CollapseItem
                             key={item}
                             activeColor="warning"
-                            css={{
-                                color: index === collapseItems.length - 1 ? "$error" : "",
-                            }}
-                            isActive={index === 2}
                         >
                             <Link
                                 color="inherit"
                                 css={{
                                     minWidth: "100%",
                                 }}
-                                href="google.com"
+                                href="#"
                             >
                                 {item}
                             </Link>
