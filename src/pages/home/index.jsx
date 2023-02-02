@@ -7,7 +7,7 @@ import Card from "../../components/card";
 import  basic from "../../assets/imagey/markus-spiske-Skf7HxARcoc-unsplash.jpg"; 
 import basic2 from "../../assets/imagey/heihei.jpg"; 
 import  basic3 from "../../assets/imagey/render.jpg"; 
-import { Container, Text , Image} from "@nextui-org/react";
+import { Container, Text , Image, Spacer , Row, Col} from "@nextui-org/react";
 import bg_pattern from "../../assets/imagey/Aare.svg"; 
 // ---
 const cards_data = [
@@ -71,11 +71,30 @@ export default function Home(){
                         <img src={GDSCHOME} alt="diversity" />
                     </div>
                 </div> */}
-            <Container>
+            <Container xl>
+                <Row gap={1}>
+                    <Col>
                 <Text h1>
                     Hello World , this is GDSC PUNE
+                        </Text>
+                
+                <Text>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio omnis eos ex velit. Deleniti, alias nam, repudiandae quae voluptate quis sequi consequuntur inventore omnis voluptatibus adipisci tempora ab eius ratione.
                 </Text>
-                <Image src={bg_pattern} />
+                    </Col>
+                    
+                <Col span={6}>
+                        <Image
+                            // css={{
+                            //     transform: "rotate(-45deg)", 
+                            // }}
+                            width={1000}
+                            height={1000}
+                            objectFit="cover"
+                            src={bg_pattern}
+                        />
+                </Col>
+                </Row>
             </Container>
             
                     <div className="md:flex mt-5 justify-evenly gap-2 w-full px-2 flex-wrap">
