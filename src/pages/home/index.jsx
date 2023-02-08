@@ -36,10 +36,10 @@ export default function Home(){
         <div className="hero-font">
 
 
-            <Container xl className="flex items-center  justify-end ">
-                <div className=" absolute  w-full z-20 text-3xl  flex  items-center  justify-center bg-white mt-20">
+            <Container xl className="flex items-center  justify-end  relative">
+                <div className=" absolute inset-1/3 font-mono text-6xl z-20 bg-white mt-20">
                     hello  world 
-
+                    work in progress 😭
                 </div>
                         <Image
                             autoResize
