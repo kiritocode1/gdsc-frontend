@@ -31,11 +31,11 @@ const Navbary = () => {
                     hideIn="xs"
                     variant="highlight"
                 >
-                    <Navbar.Link href="#" isActive={Activity} onClick={()=>setActivity(!Activity)}>Community</Navbar.Link>
+                    <Navbar.Link href="/gdsc-frontend/team/" isActive={Activity} onClick={()=>setActivity(!Activity)}>Community</Navbar.Link>
                     <Navbar.Link isActive={Activity} href="#" onClick={()=>setActivity(!Activity)}>
                         Contact us 
                     </Navbar.Link>
-                    <Navbar.Link href="#">Projects</Navbar.Link>
+                    <Navbar.Link href="/gdsc-frontend/projects/">Projects</Navbar.Link>
                     <Navbar.Link href="#">Products</Navbar.Link>
                 </Navbar.Content>
                 <Navbar.Content

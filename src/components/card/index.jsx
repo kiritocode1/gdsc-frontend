@@ -5,22 +5,28 @@ import { Card, Col, Text } from "@nextui-org/react";
 
 
 const Cardy = ({heading , description , icon}) => (
-
-  <Card isHoverable isPressable>
-    <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }} >
+<div className="w-[35rem]">
+<Card isHoverable isPressable >
+    <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
       <Col>
-        <Text  weight="bold" transform="uppercase" color="$black500">
+        <Text size={40} weight="bold" transform="uppercase" color="$black500" className="  hover:visible">
           {heading}
         </Text>
-      </Col>
-      </Card.Header>
-      <Card.Body>
-                <Text h4 color="secondary">
+        <Text h4 color="black">
           {description}
         </Text>
-      </Card.Body>
-    </Card>
-
+      </Col>
+    </Card.Header>
+    <Card.Image
+      src={icon}
+      objectFit="fill"
+      width="100%"
+      height={340}
+        alt="Card image background"
+        className="hover:blur-lg"
+    />
+  </Card>
+</div>
 );
 
 export default Cardy; 

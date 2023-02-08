@@ -1,8 +1,8 @@
-import Blob1 from "./Blob1.svg"; 
-import Blob2 from "./Blob2.svg"; 
-import Blob3 from "./Blob3.svg"; 
+import Card1 from "../avatars/card1.png"
+import Card2 from "../avatars/card2.png"
+import Card3 from "../avatars/card3.png"
 
-const Blobs = [Blob1, Blob2, Blob3]; 
+const Blobs = [Card1, Card2, Card3]; 
 
 
 
