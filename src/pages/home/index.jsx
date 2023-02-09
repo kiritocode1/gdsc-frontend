@@ -3,7 +3,7 @@
 import React from "react";
 
 import Card from "../../components/card";
-
+import { Sandpack } from "@codesandbox/sandpack-react";
 import { Container, Text , Image, Spacer , Row, Col} from "@nextui-org/react";
 import bg_pattern from "../../assets/imagey/Aare.svg"; 
 import Blobs from "../../assets/Blobs/Blobs"; 
@@ -54,7 +54,8 @@ export default function Home(){
                                 return <Card {...data} />
                             })
                         }
-                    </div>
+            </div>
+            <Sandpack template="angular" theme="dark"/>
             </div>
     )
 }
