@@ -27,20 +27,20 @@ export const endpoints = {
 
   home:`/`,
   projects:`projects/`,
-  team:`team/`,
+  team: `team/`,
 }
 
 function App() {
   return (
     <>
-      <Navbar/>
-        <Routes>
-                <Route path={endpoints.home} element={<Home/>}/>
-                <Route path={endpoints.projects} element={<Projects/>}/>
-                <Route path={endpoints.team} element={<Team/>}/>
+      <Navbar />
+      <Routes>
+        <Route path={endpoints.home} element={<Home />} />
+        <Route path={endpoints.projects} element={<Projects />} />
+        <Route path={endpoints.team} element={<Team />} />
       </Routes>
-      <Footer/>
-      </>
+      <Footer />
+    </>
   );
 }
 

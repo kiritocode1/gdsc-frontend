@@ -22,7 +22,7 @@ const Cardy = ({ heading, description, icon }) => {
     }
   }); 
   return(
-    <div className="w-[35rem]" onMouseEnter={() => setisHoverActive(true)} onMouseLeave={()=>setisHoverActive(false)}>
+    <div className="w-[30rem]" onMouseEnter={() => setisHoverActive(true)} onMouseLeave={()=>setisHoverActive(false)}>
       <Card isHoverable isPressable  >
         <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
           <Col>
@@ -31,7 +31,7 @@ const Cardy = ({ heading, description, icon }) => {
             </a.div>
             <a.div style={propsMainDesc} className="text-3xl font-bold">
               {description}
-            </a.div>
+            </a.div>  
           </Col>
         </Card.Header>
         <Card.Image

@@ -4,7 +4,7 @@ import React from "react";
 
 import Card from "../../components/card";
 import { Sandpack } from "@codesandbox/sandpack-react";
-import { Container, Text , Image, Spacer , Row, Col} from "@nextui-org/react";
+import { Container , Image, Text, } from "@nextui-org/react";
 import bg_pattern from "../../assets/imagey/Aare.svg"; 
 import Blobs from "../../assets/Blobs/Blobs"; 
 const cards_data = [
@@ -29,33 +29,74 @@ const cards_data = [
 ]
 
 
+
+const ClipLeft = () => {
+    return (
+        <div>
+            <Text
+                h1
+                size={60}
+                css={{
+                    textGradient: "45deg, $blue600 -20%, $pink600 50%",
+                }}
+                weight="bold"
+            >
+                Let's
+            </Text>
+            <Text
+                h1
+                size={60}
+                css={{
+                    textGradient: "45deg, $purple600 -20%, $pink600 100%",
+                }}
+                weight="bold"
+            >
+                Make the Web
+            </Text>
+            <Text
+                h1
+                size={60}
+                css={{
+                    textGradient: "45deg, $yellow600 -20%, $red600 100%",
+                }}
+                weight="bold"
+            >
+                Prettier
+            </Text>
+        </div>
+    )
+}; 
+
+const ClipRight = () => { 
+    return (<>
+        <Image src={bg_pattern}  css={{
+            clipPath : "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)"
+        }}  autoResize>
+        
+        </Image>  
+    
+    </>)
+}
+
+
+
 export default function Home(){
 
 
     return (
         <div className="hero-font">
-
-
-            <Container xl className="flex items-center  justify-end  relative">
-                <div className=" absolute inset-1/3 font-mono text-6xl z-20 bg-white mt-20">
-                    hello  world 
-                    work in progress 😭
-                </div>
-                        <Image
-                            autoResize
-                            src={bg_pattern}
-                            className="w-full z-10 absolute"
-                />
-                </Container>
-
-                    <div className="md:flex mt-5 justify-evenly gap-2 w-full px-2 flex-wrap">
-                        {
-                            cards_data.map((data)=>{
-                                return <Card {...data} />
-                            })
-                        }
+            <div className={"flex items-center justify-center py-20"}>
+                <ClipLeft />
+                <ClipRight/>
             </div>
-            <Sandpack template="angular" theme="dark"/>
+            <div className="md:flex mt-5 justify-evenly gap-2 w-full px-2 flex-wrap">
+                {
+                    cards_data.map((data) => {
+                        return <Card {...data} />
+                    })
+                }
             </div>
+            <Sandpack template="angular" theme="dark" />
+        </div>
     )
-}
+}; 

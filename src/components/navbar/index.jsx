@@ -1,15 +1,15 @@
 
 import NBNSSOE from "../../assets/imagey/vector-logo.svg";
 import { useState } from "react";
-import { Navbar, Link, Text, Avatar, Dropdown , Image} from "@nextui-org/react";
+import { Navbar, Link,Image} from "@nextui-org/react";
 
 const Navbary = () => {
-    const [Activity, setActivity] = useState(false);
+const [Activity, setActivity] = useState([false, false , false]);
     const collapseItems = [
         "Community",
-        "Contact Us", 
+        "Contact_Us", 
         "Projects", 
-        "Products"
+
     ];
 
     return (
@@ -23,20 +23,22 @@ const Navbary = () => {
                         },
                     }}
                 >
-                    <Image  src={NBNSSOE} alt="logo image " width={90}/>
-                </Navbar.Brand>
+                    <Link href="/gdsc-frontend/">
+                    <Image  src={NBNSSOE} alt="logo image" width={90}/>
+                </Link>
+                    </Navbar.Brand>
                 <Navbar.Content
                     enableCursorHighlight
-                    activeColor="warning"
+                    activeColor="error"
                     hideIn="xs"
                     variant="highlight"
                 >
-                    <Navbar.Link href="/gdsc-frontend/team/" isActive={Activity} onClick={()=>setActivity(!Activity)}>Community</Navbar.Link>
-                    <Navbar.Link isActive={Activity} href="#" onClick={()=>setActivity(!Activity)}>
+                    <Navbar.Link href="/gdsc-frontend/team/" isActive={Activity[0]} onClick={()=>setActivity([true, false , false])}>Community</Navbar.Link>
+                    <Navbar.Link isActive={Activity[1]} href="#" onClick={()=>setActivity([false, true , false])}>
                         Contact us 
                     </Navbar.Link>
-                    <Navbar.Link href="/gdsc-frontend/projects/">Projects</Navbar.Link>
-                    <Navbar.Link href="#">Products</Navbar.Link>
+
+                    <Navbar.Link href="/gdsc-frontend/projects/" isActive={Activity[2]}  onClick={()=>setActivity([false, false , true])}>Projects</Navbar.Link>
                 </Navbar.Content>
                 <Navbar.Content
                     css={{
@@ -46,8 +48,6 @@ const Navbary = () => {
                         },
                     }}
                 >
-                    
-                    
                 </Navbar.Content>
                 <Navbar.Collapse disableAnimation>
                     {collapseItems.map((item) => (
@@ -60,7 +60,7 @@ const Navbary = () => {
                                 css={{
                                     minWidth: "100%",
                                 }}
-                                href="#"
+                                href={`/gdsc-frontend/${item}/`}
                             >
                                 {item}
                             </Link>
