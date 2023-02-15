@@ -5,8 +5,15 @@ import React from "react";
 import Card from "../../components/card";
 import { Sandpack } from "@codesandbox/sandpack-react";
 import { Container , Image, Text, } from "@nextui-org/react";
-import bg_pattern from "../../assets/imagey/Aare.svg"; 
+
 import Blobs from "../../assets/Blobs/Blobs"; 
+import { useSpring , animated as a  } from "@react-spring/web";
+
+import Cute_Avatars from "../../assets/avatars/avatats_cute/cute.js"; 
+
+
+
+
 const cards_data = [
     {
         id:1,
@@ -32,52 +39,62 @@ const cards_data = [
 
 const ClipLeft = () => {
     return (
-        <div>
+        <div className={"absolute text-center z-10 flex flex-col"}>
+            <span>
+
+            </span>
             <Text
                 h1
                 size={60}
                 css={{
-                    textGradient: "45deg, $blue600 -20%, $pink600 50%",
+                    textGradient: "45deg, #109D58 -20%, #FABC05 50%",
                 }}
                 weight="bold"
             >
-                Let's
+                Google Developers 
             </Text>
             <Text
                 h1
                 size={60}
                 css={{
-                    textGradient: "45deg, $purple600 -20%, $pink600 100%",
+                    textGradient: "45deg, #E94436 -20%, #4385F3 100%",
                 }}
                 weight="bold"
             >
-                Make the Web
+                Students Club  
             </Text>
             <Text
-                h1
                 size={60}
                 css={{
                     textGradient: "45deg, $yellow600 -20%, $red600 100%",
                 }}
-                weight="bold"
+                
             >
-                Prettier
+                Sinhgad Pune 
             </Text>
         </div>
     )
 }; 
 
-const ClipRight = () => { 
-    return (<>
-        <Image src={bg_pattern}  css={{
-            clipPath : "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)"
-        }}  autoResize>
-        
-        </Image>  
-    
-    </>)
-}
-
+const ClipRight = () => {
+    const style = useSpring({
+        from: { 
+            opacity : 0
+        }, 
+        to: { 
+            opacity:1
+        }, 
+        config:{duration: 1000}
+    })
+    return (
+        <div className={"absolute z-0  flex  "}>
+            {
+                Cute_Avatars.map((item, index) => <a.div style={style}>
+                    <img src={item} alt="hello world " />
+                </a.div>)
+            }
+        </div>)
+};
 
 
 export default function Home(){
@@ -85,11 +102,11 @@ export default function Home(){
 
     return (
         <div className="hero-font">
-            <div className={"flex items-center justify-center py-20"}>
+            <div className={"flex items-center justify-center py-20 relative my-40"}>
                 <ClipLeft />
                 <ClipRight/>
             </div>
-            <div className="md:flex mt-5 justify-evenly gap-2 w-full px-2 flex-wrap">
+            <div className="mt-5  w-full grid  grid-flow-auto md:grid-cols-2">
                 {
                     cards_data.map((data) => {
                         return <Card {...data} />

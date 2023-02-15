@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 import { useSpring , animated as a  } from "@react-spring/web";
 
-import { Card, Col, Text } from "@nextui-org/react";
+import { Card, Col,  } from "@nextui-org/react";
 
 
 const Cardy = ({ heading, description, icon }) => {
@@ -22,8 +22,8 @@ const Cardy = ({ heading, description, icon }) => {
     }
   }); 
   return(
-    <div className="w-[30rem]" onMouseEnter={() => setisHoverActive(true)} onMouseLeave={()=>setisHoverActive(false)}>
-      <Card isHoverable isPressable  >
+
+      <Card isHoverable isPressable  onMouseEnter={() => setisHoverActive(true)} onMouseLeave={()=>setisHoverActive(false)} >
         <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
           <Col>
             <a.div style={propsMainText} className="text-5xl font-extrabold font-sans">
@@ -43,7 +43,7 @@ const Cardy = ({ heading, description, icon }) => {
           className={`${isHoverActive?"blur-lg":""}`}
         />
       </Card>
-    </div>
+
 
   )
 };
