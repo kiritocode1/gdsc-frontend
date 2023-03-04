@@ -1,6 +1,6 @@
 //---
 
-import React from "react";
+import React, {useState} from "react";
 
 import Card from "../../components/card";
 import { Sandpack } from "@codesandbox/sandpack-react";
@@ -143,7 +143,21 @@ export default function Home(){
         opacity: 1, 
         delay:1000
     });
+    const [ isHovering, setH ] = useState(false);
+    const [ isHovering2, setH2 ] = useState(false); 
+    const [ isHovering3, setH3 ] = useState(false); 
+    
+    const nice_android_animation = useSpring({
+        rotateZ: isHovering? -8: 0
+    });
 
+    const nice_web_animation = useSpring({
+        rotateZ: isHovering2? 8: 0
+    });
+
+        const nice_ai_animation = useSpring({
+        rotateZ: isHovering3? -8: 0
+    });
     return (
         <div className="hero-font">
             <div className={"flex items-center justify-center py-20 relative my-40"}>
@@ -179,23 +193,73 @@ export default function Home(){
                     <Text size={ 20 }>Opportunities to learn</Text>
             </div>
                 <div className={"flex justify-evenly items-center w-full "}>
-                    <div className={ "w-full " }>
-                        <img src={Hero_images["android"]} alt="android" className={"w-80 "}/>
+                    <div className={ "md:w-full md:flex sm:w-0" }>
+                        <img src={Hero_images["android"]} alt="android" className={"w-96"}/>
                     </div>
         
                     <div className={ "w-full" }>
                         <div className={"flex items-center gap-2"}>
-                            <Text h1>Learn @angular</Text>
-                            <a href="https://codelabs.developers.google.com/?cat=Web" target={"_blank"} rel="noreferrer"><Button shadow auto color="primary"  ><AiFillPlayCircle className={"text-3xl"}/> codelabs</Button></a>
+                            <Text h1 >Learn @angular</Text>
+                            <a href="https://codelabs.developers.google.com/?cat=Web" target={"_blank"} rel="noreferrer"><Button shadow auto color="success"  ><AiFillPlayCircle className={"text-3xl"}/> codelabs</Button></a>
                         </div>
-                        Every year Google developers release exciting new updates to the world's most popular Framework. We always have sessions to keep you updated and mastering the latest trends in modern web development.
+Learn the core foundations of a delightful web experience both for the user and developer. Stay up to tabs with emerging and trending technologies. Get access to a guided, tutorial and hands-on coding experience.
+
                     
                     
                     </div>
                 </div>
             </div>
 
-            <Sandpack template="angular"  />
+            <Sandpack template="angular" />
+            <div className={ "w-full h-96 flex items-center justify-center" }>
+                                    <div className={ "w-full" }>
+                        <div className={"flex items-center gap-2"}>
+                            <Text h1 >Learn android dev</Text>
+                            <a href="https://codelabs.developers.google.com/?cat=Android" target={"_blank"} rel="noreferrer"><Button shadow auto color="primary"  ><AiFillPlayCircle className={"text-3xl"}/> codelabs</Button></a>
+                        </div>
+Every year Google developers release exciting new updates to the world's most popular operating system. We always have sessions to keep you updated and mastering the latest trends in modern Android development.
+
+                    
+                    </div>
+
+                <div className={ "w-full" } onMouseEnter={ () => setH(true) } onMouseLeave={ () => setH(false)}>
+                    <a.img src={ Hero_images[ "web" ] } alt="android" className={ "" } style={nice_android_animation}  /></div>
+
+
+            </div>
+            
+            <div className={ "flex w-full h-96" }>
+                <div className="w-full flex justify-end" onMouseEnter={ () => setH2(true) } onMouseLeave={ () => setH2(false)}>
+                <a.img src={ Hero_images[ "cloud" ] } className={ "" } style={nice_web_animation}  /></div>
+                                                    <div className={ "w-full" }>
+                        <div className={"flex items-center gap-2"}>
+                            <Text h1 >Learn Cloud </Text>
+                            <a href="https://codelabs.developers.google.com/?cat=Android" target={"_blank"} rel="noreferrer"><Button shadow auto color="warning"  ><AiFillPlayCircle className={"text-3xl"}/> codelabs</Button></a>
+                        </div>
+For passionate developers who want to stay relevant in a cloud first world where businesses demand for agility and innovation and prompt rise of cloud-native applications to bridges gaps between data, insight, and action.
+                    
+                    </div>
+
+                
+            </div>
+
+            
+                        <div className={ "flex w-full h-96" }>
+
+                                                    <div className={ "w-full" }>
+                        <div className={"flex items-center gap-2"}>
+                            <Text h1 >Learn Machine learning </Text>
+                            <a href="https://codelabs.developers.google.com/?cat=Android" target={"_blank"} rel="noreferrer"><Button shadow auto color="error"  ><AiFillPlayCircle className={"text-3xl"}/> codelabs</Button></a>
+                        </div>
+For passionate developers who want to stay relevant in a cloud first world where businesses demand for agility and innovation and prompt rise of cloud-native applications to bridges gaps between data, insight, and action.
+                    
+                    </div>
+
+                                <div className="w-full flex justify-start" onMouseEnter={ () => setH3(true) } onMouseLeave={ () => setH3(false)}>
+                <a.img src={ Hero_images[ "ai" ] } className={ "w-60" } style={nice_ai_animation}  /></div>
+            </div>
+
+
         </div>
     )
 }; 
