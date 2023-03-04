@@ -4,7 +4,7 @@ import React, {useState} from "react";
 
 import Card from "../../components/card";
 import { Sandpack } from "@codesandbox/sandpack-react";
-import { Container , Image, Text,Button, } from "@nextui-org/react";
+import {  Text,Button, } from "@nextui-org/react";
 
 import Blobs from "../../assets/Blobs/Blobs"; 
 import { useSpring , animated as a  } from "@react-spring/web";
